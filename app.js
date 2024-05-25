@@ -2,7 +2,6 @@ import {YOUTUBE_API_KEY} from "./config.js"
 
 const videoCardContainer = document.querySelector('.video-container');
 
-// let api_key = "AIzaSyDF4DJp3I4plQQxJ7yzVOlMMqSP9zjK4FU";
 let video_http = "https://www.googleapis.com/youtube/v3/videos?";
 let channel_http = "https://www.googleapis.com/youtube/v3/channels?";
 
