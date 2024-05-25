@@ -1,11 +1,13 @@
+import {YOUTUBE_API_KEY} from "./config.js"
+
 const videoCardContainer = document.querySelector('.video-container');
 
-let api_key = "AIzaSyDF4DJp3I4plQQxJ7yzVOlMMqSP9zjK4FU";
+// let api_key = "AIzaSyDF4DJp3I4plQQxJ7yzVOlMMqSP9zjK4FU";
 let video_http = "https://www.googleapis.com/youtube/v3/videos?";
 let channel_http = "https://www.googleapis.com/youtube/v3/channels?";
 
 fetch(video_http + new URLSearchParams({
-    key: api_key,
+    key: YOUTUBE_API_KEY,
     part: 'snippet',
     chart: 'mostPopular',
     maxResults: 50,
@@ -21,7 +23,7 @@ fetch(video_http + new URLSearchParams({
 
 const getChannelIcon = (video_data) => {
     fetch(channel_http + new URLSearchParams({
-        key: api_key,
+        key: YOUTUBE_API_KEY,
         part: 'snippet',
         id: video_data.snippet.channelId
     }))
